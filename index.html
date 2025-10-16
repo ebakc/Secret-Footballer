@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Footballer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-futbol"></i>
+                <span>Secret Footballer</span>
+            </div>
+            <div class="header-controls">
+                <select id="languageSelect" class="language-select">
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                </select>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-setup">
+                <div class="players-section">
+                    <div class="players-list" id="playersList">
+                        <!-- Oyuncular JavaScript ile eklenecek -->
+                    </div>
+                    <div class="controls-wrapper">
+                        <div class="player-controls">
+                            <button class="btn primary" id="addPlayer">Oyuncu Ekle</button>
+                            <button class="btn secondary" id="removePlayer">Oyuncu Çıkar</button>
+                        </div>
+                        <div class="spy-select">
+                            <label>
+                                <input type="radio" name="spyCount" value="1" checked>
+                                <i class="fas fa-user-secret"></i>
+                            </label>
+                            <label>
+                                <input type="radio" name="spyCount" value="2">
+                                <i class="fas fa-user-secret"></i>
+                                <i class="fas fa-user-secret"></i>
+                            </label>
+                            <label>
+                                <input type="radio" name="spyCount" value="3">
+                                <i class="fas fa-user-secret"></i>
+                                <i class="fas fa-user-secret"></i>
+                                <i class="fas fa-user-secret"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn start-game" id="startGame">Oyunu Başlat</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>&copy; Emre Burak AKÇEALAN. 2024 Secret Footballer. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

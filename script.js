@@ -1,12 +1,23 @@
 // Tema değiştirme fonksiyonu
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
+const logo = document.querySelector('.logo img');
+
+// Tema durumuna göre logo değiştirme fonksiyonu
+const updateLogo = () => {
+    const isLightTheme = body.classList.contains('light-theme');
+    logo.src = isLightTheme ? 'darksecretfootballer.png' : 'whitesecretfootballer.png';
+};
+
+// Sayfa yüklendiğinde başlangıç logosu
+updateLogo();
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-theme');
     const icon = themeToggle.querySelector('i');
     icon.classList.toggle('fa-moon');
     icon.classList.toggle('fa-sun');
+    updateLogo();
 });
 
 // Smooth scroll için
